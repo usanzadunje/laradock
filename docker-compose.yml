@@ -7,6 +7,9 @@ services:
     working_dir: /var/www
     volumes:
       - ./:/var/www
+    ports:
+      - "3000:3000"
+    #remove ports when using webpack
     command: php artisan serve --host=0.0.0.0 --port=80
 
   queue:
@@ -25,7 +28,7 @@ services:
       - .:/var/www
     working_dir: /var/www
     ports:
-      - "3000:3000"
+ 		# - "3000:3000" uncomment for webpack
       - "3001:3001"
     # command: npm run watch for webpack
     command: npm run dev
