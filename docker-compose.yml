@@ -30,7 +30,7 @@ services:
     ports:
  		# - "3000:3000" uncomment for webpack
       - "3001:3001"
-    # command: npm run watch for webpack
+    # command: npm run watch uncomment for webpack
     command: npm run dev
 
   db:
